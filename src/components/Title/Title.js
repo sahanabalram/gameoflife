@@ -1,10 +1,18 @@
 import React, {Component} from "react";
-
+import Grid from "../../components/Grid";
 class Title extends Component {
-    render(){
-        return(
+    constructor() {
+        super();
+        this.state = {
+            generation: 0
+        }
+    }
+    render() {
+        return (
             <div>
-            <h1> Game of Life</h1>
+                <h1>The Game of Life</h1>
+                <Grid/>
+                <h3>Generations: {this.state.generation}</h3>
             </div>
         )
     }
