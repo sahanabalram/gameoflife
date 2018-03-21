@@ -57,6 +57,7 @@ class Title extends Component {
 
     sizeOfTheGrid = (size) => {
         switch (size) {
+            // case number is represented as a string since its getting the event id key from MenuItem in the button component
             case "1":
                 this.cols = 20;
                 this.rows = 10;
@@ -79,12 +80,12 @@ class Title extends Component {
                 let count = 0;
                 //   check each neighbour is alive or not
                 if (i > 0) 
-                    if (grid1[i - 1][j]) 
+                if (grid1[i - 1][j]) 
                         count++;
-            if (i > 0 && j > 0) 
+                if (i > 0 && j > 0) 
                     if (grid1[i - 1][j - 1]) 
                         count++;
-            if (i > 0 && j < this.cols - 1) 
+                if (i > 0 && j < this.cols - 1) 
                     if (grid1[i - 1][j + 1]) 
                         count++;
             if (j < this.cols - 1) 
