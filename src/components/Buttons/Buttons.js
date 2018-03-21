@@ -16,7 +16,7 @@ class Buttons extends Component {
                     <Button bsStyle="warning" onClick={this.props.slow}>Slow</Button>
                     <Button bsStyle="warning" onClick={this.props.fast}>Fast</Button>
                     <Button bsStyle="success" onClick={this.props.seed}>Seed</Button>
-                    <Button bsStyle="default" onClick={this.props.clear}>Clear</Button>
+                    <Button bsStyle="primary" onClick={this.props.clear}>Clear</Button>
                     <DropdownButton title="Grid Size" id="size-menu" onSelect={this.handleSelect}>
                         <MenuItem eventKey="1">20x10</MenuItem>
                         <MenuItem eventKey="2">50x30</MenuItem>
