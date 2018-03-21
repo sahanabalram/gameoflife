@@ -54,6 +54,23 @@ class Title extends Component {
             .map(() => Array(this.cols).fill(false));
         this.setState({fullGrid: grid, generation: 0});
     }
+
+    sizeOfTheGrid = (size) => {
+        switch (size) {
+            case "1":
+                this.cols = 20;
+                this.rows = 10;
+                break;
+            case "2":
+                this.cols = 50;
+                this.rows = 30;
+                break;
+            default:
+                this.cols = 70;
+                this.rows = 50;
+        }
+        this.clear();
+    }
     play = () => {
         let grid1 = this.state.fullGrid;
         let grid2 = cloneArray(this.state.fullGrid);
@@ -115,7 +132,8 @@ class Title extends Component {
                     slow={this.slow}
                     fast={this.fast}
                     seed={this.seed}
-                    clear={this.clear}/>
+                    clear={this.clear}
+                    sizeOfTheGrid={this.sizeOfTheGrid}/>
                 <h3>Generations: {this.state.generation}</h3>
             </div>
         )
