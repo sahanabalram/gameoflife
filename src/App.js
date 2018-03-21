@@ -3,6 +3,7 @@ import './App.css';
 import Title from "./components/Title";
 import Grid from "./components/Grid";
 import Box from "./components/Box";
+import Buttons from "./components/Buttons";
 
 class App extends Component {
 
@@ -11,6 +12,7 @@ class App extends Component {
       <div className="App container">
       <Title/>
       <Grid/>
+       {/*<Buttons/>*/}
       <Box/>
       </div>
     );
