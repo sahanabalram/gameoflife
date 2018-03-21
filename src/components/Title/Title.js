@@ -12,6 +12,26 @@ class Title extends Component {
             fullGrid: Array(this.rows).fill().map(()=>Array(this.cols).fill(false))
         }
     }
+    selectBox= (row,col) => {
+        let gridCopy = cloneArray(this.state.fullGrid);
+        gridCopy[row][col] =!gridCopy[row][col];
+        this.setState({fullGrid:gridCopy});
+    }
+    seed = () => {
+        let gridCopy = cloneArray(this.state.fullGrid);
+        for(let i = 0; i<this.rows; i++) {
+            for(let j = 0; j < this.cols; j++) {
+                if(Math.floor(Math.random() * 4) ===1){
+                    gridCopy[i][j] = true;
+                }
+            }
+        }
+        this.setState({fullGrid:gridCopy});
+    }
+
+    componentDidMount() {
+        this.seed();
+    }
     render() {
         return (
             <div className="container">
@@ -27,5 +47,7 @@ class Title extends Component {
         )
     }
 }
-
+function cloneArray(arr) {
+    return JSON.parse(JSON.stringify(arr));
+}
 export default Title;
