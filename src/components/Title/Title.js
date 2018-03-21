@@ -33,10 +33,21 @@ playButton = () => {
     clearInterval(this.intervalID);
     this.intervalID = setInterval(this.play,this.speed);
 }
+slow = () => {
+    this.speed = 1000;
+    this.playButton();
+}
+
+fast = () => {
+    this.speed = 100;
+    this.playButton();
+}
+
 
 pauseButton = () => {
     clearInterval(this.intervalID);
 }
+
 play = () => {
     let grid1 = this.state.fullGrid;
     let grid2 = cloneArray(this.state.fullGrid);
@@ -77,9 +88,7 @@ play = () => {
                 pauseButton = {this.pauseButton()}
                 slow = {this.slow()}
                 fast = {this.fast()}
-                clear = {this.clear()}
-                seed = {this.seed()}
-                sizeOfTheGrid = {this.sizeOfTheGrid()}/>
+                seed = {this.seed()}/>
                 <h3>Generations: {this.state.generation}</h3>
             </div>
         )
