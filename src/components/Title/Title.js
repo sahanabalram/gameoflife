@@ -71,6 +71,14 @@ play = () => {
                 cols={this.cols}
                 selectBox = {this.selectBox}
                 />
+                <Buttons 
+                playButton = {this.playButton()}
+                pauseButton = {this.pauseButton()}
+                slow = {this.slow()}
+                fast = {this.fast()}
+                clear = {this.clear()}
+                seed = {this.seed()}
+                sizeOfTheGrid = {this.sizeOfTheGrid()}/>
                 <h3>Generations: {this.state.generation}</h3>
             </div>
         )
