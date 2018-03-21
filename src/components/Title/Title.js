@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import Grid from "../../components/Grid";
+import Buttons from "../../components/Buttons";
 import "./Title.css";
 class Title extends Component {
     constructor() {
