@@ -1,5 +1,6 @@
 import React, {Component} from "react";
-
+import "./Grid.css";
+import Box from "../../components/Box";
 class Grid extends Component {
     render(){
         const width = this.props.cols * 14;
@@ -19,7 +20,7 @@ class Grid extends Component {
         }
         return(
             <div className="grid" style={{width:width}}>
-            <h1>Grid Component</h1>
+            {rowsArray}
             </div>
         )
     }
