@@ -9,6 +9,8 @@ Rules of the Game:
 
 ## Deployed Link
 https://sahanabalram.github.io/gameoflife
+
+
 ![screenshot of the App](gameoflife.png)
 ## Author
 Sahana Balram
